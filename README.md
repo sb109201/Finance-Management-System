@@ -1,9 +1,5 @@
 # Finance-Management-System
 Spring Boot backend for managing financial records with CRUD APIs and dashboard summary (income, expenses, balance).
-# 💰 Finance Tracker Backend
-
-A Spring Boot backend application to manage financial records such as income and expenses. It provides REST APIs for CRUD operations and a dashboard summary.
-
 ---
 
 ## 🚀 Features
