@@ -55,6 +55,11 @@ public class RecordController {
 
         User user = userService.getUserById(userId);
 
+        // ✅ ADD THIS CHECK
+        if (user == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+        }
+
         if (!Boolean.TRUE.equals(user.isActive())) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "User is inactive");
         }
@@ -66,7 +71,6 @@ public class RecordController {
 
         return recordService.getAllRecords();
     }
-
     // ✅ GET BY ID (ADMIN + ANALYST)
     @GetMapping("/{id}")
     public Record getRecordById(@PathVariable Long id, @RequestParam Long userId) {
