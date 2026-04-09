@@ -1,0 +1,2 @@
+INSERT INTO USERS (ID, NAME, ROLE, ACTIVE, EMAIL)
+VALUES (1, 'AdminUser', 'ADMIN', TRUE, 'admin@test.com');
